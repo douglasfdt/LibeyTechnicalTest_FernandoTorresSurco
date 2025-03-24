@@ -1,8 +1,8 @@
 # **Libey - Enazul - Test**
 
-**Prueba tecnica**
-Adjunto capturas del CRUD:
-Listar:
+**Prueba tecnica**<br>
+Adjunto capturas del CRUD:<br>
+Listar:<br>
 ![image](https://github.com/user-attachments/assets/516ac99b-0ee7-435c-81be-12429e3904c5)
 Filtrar:
 ![image](https://github.com/user-attachments/assets/5cb974aa-e2ba-4672-bae0-7c76b0c2407e)
