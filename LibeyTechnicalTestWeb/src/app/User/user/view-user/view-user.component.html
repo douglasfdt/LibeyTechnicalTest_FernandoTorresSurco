@@ -1,0 +1,49 @@
+<div class="container">
+    <h3>Detalles del Usuario</h3>
+
+    <!-- Mensaje de carga -->
+    <div *ngIf="!user">Cargando datos...</div>
+
+    <!-- Mostrar información del usuario cuando esté disponible -->
+    <div *ngIf="user">
+        <div class="row pb-2">
+            <div class="col-lg-3"><strong>DNI:</strong></div>
+            <div class="col-lg-9">{{ user.documentNumber }}</div>
+        </div>
+        <div class="row pb-2">
+            <div class="col-lg-3"><strong>Nombre:</strong></div>
+            <div class="col-lg-9">{{ user.name }}</div>
+        </div>
+        <div class="row pb-2">
+            <div class="col-lg-3"><strong>Apellido Paterno:</strong></div>
+            <div class="col-lg-9">{{ user.fathersLastName }}</div>
+        </div>
+        <div class="row pb-2">
+            <div class="col-lg-3"><strong>Apellido Materno:</strong></div>
+            <div class="col-lg-9">{{ user.mothersLastName }}</div>
+        </div>
+        <div class="row pb-2">
+            <div class="col-lg-3"><strong>Dirección:</strong></div>
+            <div class="col-lg-9">{{ user.address }}</div>
+        </div>
+        <div class="row pb-2">
+            <div class="col-lg-3"><strong>Teléfono:</strong></div>
+            <div class="col-lg-9">{{ user.phone }}</div>
+        </div>
+        <div class="row pb-2">
+            <div class="col-lg-3"><strong>Email:</strong></div>
+            <div class="col-lg-9">{{ user.email }}</div>
+        </div>
+        <div class="row pb-2">
+            <div class="col-lg-3"><strong>Estado:</strong></div>
+            <div class="col-lg-9">
+                <span [ngClass]="{'text-success': user.active, 'text-danger': !user.active}">
+					{{ user.active ? "Activo" : "Inactivo" }}
+				</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón para volver -->
+    <button class="btn btn-secondary mt-3" (click)="GoBack()">Volver</button>
+</div>
